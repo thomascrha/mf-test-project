@@ -1,12 +1,13 @@
 <template>
-  
+  <div class='summary'>
+  {{summary}}
+  </div>
 </template>
 
 <script>
+
 export default {
   name: 'Summary',
-  props: {
-    msg: String
-  }
+  props: ['summary'],
 }
 </script>
