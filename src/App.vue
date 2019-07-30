@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-  <Show v-bind:json='json'> </Show>
+  <Show :json='json'> </Show>
   </div>
 </template>
 
 <script>
+import BootstrapVue from 'bootstrap-vue'
+
 // component
 import Show from './components/Show.vue'
 
