@@ -11,21 +11,25 @@
   <Episodes 
     :seasons='seasons'
     :episodes='episodes'>
-  </Episodes>
+ </Episodes>
   </div>
 </template>
 
+
 <script>
 // components
+
 import Episodes from './Episodes.vue'
 import Summary from './Summary.vue'
+import Test from './Test.vue'
 
 export default {
   name: 'Show',
   props: ['json'],
   components: {
     Summary,
-    Episodes
+    Episodes,
+    Test
   },
   data () {
     // format the data into its seperate parts

@@ -10,75 +10,50 @@
       </div>
     </b-button-group>
   </b-card>
-
-
   <div class="container-fluid">
-    <b-card-group deck>
-      <b-card 
-        no-body 
-        class="b1" 
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img src="https://picsum.photos/400/400/?image=20" 
-              class="rounded-circle"></b-card-img
-            >
-          </b-col>
-          <b-col md="6">
-            <b-card-body title="Horizontal Card">
-              <b-card-text>
-                This is a wider card with supporting text as a natural lead-in to additional content.
-                This content is a little bit longer.
-              </b-card-text>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
-      <b-card 
-        no-body 
-        class="m1" 
-      >
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img src="https://picsum.photos/400/400/?image=20" 
-              class="rounded-circle"></b-card-img
-            >
-          </b-col>
-          <b-col md="6">
-            <b-card-body title="Horizontal Card">
-              <b-card-text>
-                This is a wider card with supporting text as a natural lead-in to additional content.
-                This content is a little bit longer.
-              </b-card-text>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
-    </b-card-group>
+    <div class="row">
+      <div class="col-auto mb-3" v-for="(episode, index) in episodes">
+        <div class="col-auto mb-3">
+          <div class="card" style="width: 15rem; height: 15rem;">
+              <div class="card-body">
+                <h6 class="card-title"><img :src="episode.image.medium" class="thumbnail rounded-circle"></img>{{episode.name}}</h6>
+                <p class="card-text small scroll" v-html="episode.summary"></p>
+                <p class="card-footer">akndjsandj</p>
+              </div>
+          </div>
+      </div> 
+    </div>
   </div>
- </div>
+</div>
+</div>
 </template>
 
 <script>
 export default {
   name: 'Episodes',
-  props: ['episodes', 'seasons']
+  props: ['episodes', 'seasons'],
 }
 </script>
 
 <style>
-
-@media(max-width: 768px){
-      .card-deck .card{
-        flex: 0 0 45%;
-        margin: 20px auto;
-      }
-    }
-
-@media(max-width: 619px){
-	.card-deck .card{
-		width: 80%;
-	}
-
+.thumbnail {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  padding: 0.5rem;
+  overflow: hidden;
 }
+.thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.scroll {
+    max-height: 4rem;
+    overflow-y: auto;
+}
+
 </style>
