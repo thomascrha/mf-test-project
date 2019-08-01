@@ -113,6 +113,8 @@ Some features that I would like to add
 * Add expanding cards - so when you click on a card a dialog would open giving you more info
 * Add some more filters - add a text search
 
+In total I used 18 points - which equates to 9 hours of work - definetly thought I do it easily under the 8, but I did spend a good 2 hours doing this journal and preparing the trello board. 
+
 
 
 
