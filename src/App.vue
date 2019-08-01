@@ -27,3 +27,14 @@ export default {
 }
 
 </script>
+
+<style>
+.card-section {
+  border: none;
+}
+
+body {
+  margin:2rem;
+}
+
+</style>

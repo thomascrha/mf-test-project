@@ -1,6 +1,6 @@
 <template>
   <div class='summary'>
-    <b-card>
+    <b-card class="card-section">
       <b-media>
         <b-img :src='images.medium'
           slot="aside"
@@ -9,17 +9,17 @@
           alt="placeholder">
         </b-img>
 
-        <h4 class="mt-0">
+        <h3 class="mt-0">
           {{name}}
-        </h4>
-        <span class="text-sm">
+        </h3>
+        <p class="subtitle text-secondary small">
           Genre: {{ genre.join(', ') }} | Rating: {{rating}}
-        </span>
+        </p>
 
         <p v-html="summary">
         </p>
 
-        <a :href="url"
+        <a :href="officialSite"
           class="btn btn-outline-primary"
           role="button"
           aria-pressed="true">
@@ -34,6 +34,6 @@
 
 export default {
   name: 'Summary',
-  props: ['summary', 'url', 'name', 'genre', 'rating', 'images']
+  props: ['summary', 'officialSite', 'name', 'genre', 'rating', 'images']
 }
 </script>

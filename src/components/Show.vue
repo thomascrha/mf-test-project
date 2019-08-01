@@ -2,7 +2,7 @@
   <div class='show'>
   <Summary
     :summary='summary.summary'
-    :url='summary.url'
+    :officialSite='summary.officialSite'
     :genre='summary.genres'
     :name='summary.name'
     :rating='summary.rating.average'
