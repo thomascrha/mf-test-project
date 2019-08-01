@@ -2,17 +2,23 @@
  <div class="episodes"> 
   <b-card>
     <b-button-group class="seasons-buttons">
-      <b-button variant="outline-primary" class="active">All</b-button>
-      <div v-for="season in seasons">
-        <b-button variant="outline-primary">
-          {{season}}
+      <b-button variant="outline-primary" 
+        @click="sortEpisodes(0)" 
+        :class="{ active : isActive == 0 }" 
+       >
+        All 
         </b-button>
-      </div>
+      <b-button variant="outline-primary" 
+        @click="sortEpisodes(season)" 
+        :class="{ active : isActive == season }" 
+        v-for="season in seasons">
+        {{season}} 
+        </b-button>
     </b-button-group>
   </b-card>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-auto mb-3" v-for="(episode, index) in episodes">
+      <div class="col-auto mb-3" v-for="(episode, index) in activeEpisodes">
         <div class="col-auto mb-3">
           <div class="card" style="width: 15rem; height: 15rem;">
               <div class="card-body">
@@ -29,9 +35,34 @@
 </template>
 
 <script>
+
 export default {
   name: 'Episodes',
   props: ['episodes', 'seasons'],
+  data () {
+      return { isActive: 0,
+              activeEpisodes: this.episodes
+              }
+  },
+  methods: {
+    sortEpisodes: function (season) {
+      // set the element to active
+      this.isActive = season
+      // create empty list for season episodes 
+      var seasonEpisodes = []
+
+      // check if all is selected
+      if (season == 0){
+        this.activeEpisodes = this.episodes
+      } else {
+        // filter the episodes 
+        for (const episode of this.episodes) {
+          (episode.season == season) ? _episodes.push(episode) : null 
+      }
+      this.activeEpisodes = seasonEpisodes
+      }
+    }
+  }
 }
 </script>
 
