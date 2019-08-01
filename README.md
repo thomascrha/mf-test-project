@@ -10,9 +10,10 @@ or visit https://mf-test-project.herokuapp.com/
 
 Created this in 8 hours for a tech test
 
-cid:f_jyjnwv5g1
+Design brief 
+![design](https://raw.githubusercontent.com/thomascrha/mf-test-project/master/Design.jpg)
 
-# Mentally Friendly Notes/Journal
+# MF Notes/Journal
 
 ## <ins>Descisions and Planning</ins> - 30/07/2019 0830 - https://trello.com/c/cZteem1z & https://trello.com/c/03a70wZ1
 
