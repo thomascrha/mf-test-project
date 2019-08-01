@@ -1,6 +1,10 @@
 # Setup
 
-Simply clone the repo and run `yarn serve`
+Simply clone the repo and run 
+
+`yarn install && yarn serve`
+
+or visit https://mf-test-project.herokuapp.com/
 
 # Mentally Friendly Notes/Journal
 
