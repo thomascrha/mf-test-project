@@ -1,3 +1,7 @@
+# Setup
+
+Simply clone the repo and run `yarn serve`
+
 # Mentally Friendly Notes/Journal
 
 ##### <ins>Descisions and Planning</ins> - 30/07/2019 0830 - https://trello.com/c/cZteem1z & https://trello.com/c/03a70wZ1
